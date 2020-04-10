@@ -14,6 +14,6 @@
     <item
         android:id="@+id/N_setting"
         android:enabled="true"
-        android:icon="@drawable/Setting_btn"
+        android:icon="@drawable/setting_btn"
         android:title="@string/setting" />
 </menu>
