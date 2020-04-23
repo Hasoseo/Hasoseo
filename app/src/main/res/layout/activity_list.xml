@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ListActivity">
 
     <View
         android:id="@+id/divider"
         android:layout_width="0dp"
         android:layout_height="120dp"
-        android:background="?android:attr/listDivider"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/Self_Intro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,16 +25,16 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="59dp"
         android:text="자기소개서"
-        android:textSize="10pt"
+        android:textSize="12pt"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/divider"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/add_btn"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="35dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@id/divider"
@@ -45,38 +46,54 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginStart="35dp"
-        android:text="3"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="15"
         android:textColor="#515050"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/Self_Intro"
         app:layout_constraintTop_toTopOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="94dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginEnd="221dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="220dp"
         android:text="개의 자기소개서"
         android:textColor="#FF515050"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/divider"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/add_btn"
+        app:layout_constraintStart_toEndOf="@id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintVertical_bias="0.526" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="340dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingTop="10dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="557dp"
+            android:clipToPadding="false"
+            android:paddingLeft="0dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="0dp" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
