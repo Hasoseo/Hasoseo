@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "749077066159",
+    "firebase_url": "https://hasoseo-808d1.firebaseio.com",
+    "project_id": "hasoseo-808d1",
+    "storage_bucket": "hasoseo-808d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749077066159:android:2eeb29d440cb41dff1ff5a",
+        "android_client_info": {
+          "package_name": "kr.hs.emirim.yensoft02.hasoseo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749077066159-r1s0g61nlbeqisjolt34bte4b16qvq5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDcePWETZZu6PO-rP8LkQxqJNpBuhNKWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749077066159-r1s0g61nlbeqisjolt34bte4b16qvq5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
