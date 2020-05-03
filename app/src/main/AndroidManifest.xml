@@ -9,17 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Hasoseo">
+        <activity android:name=".DetailWriteActivity"></activity>
+        <activity android:name=".Write_Sub" />
         <activity android:name=".WriteActivity" />
         <activity android:name=".TranslateActivity" />
         <activity android:name=".SettingActivity" />
-        <activity android:name=".ListActivity">
+        <activity android:name=".List_frag">
+
+        </activity>
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
