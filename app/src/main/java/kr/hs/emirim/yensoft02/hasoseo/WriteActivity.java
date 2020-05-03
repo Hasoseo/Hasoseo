@@ -1,6 +1,5 @@
 package kr.hs.emirim.yensoft02.hasoseo;
 
-
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,4 +19,5 @@ public class WriteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_write);
 
     }
+
 }
