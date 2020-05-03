@@ -8,56 +8,25 @@
     tools:context=".TranslateActivity">
 
     <TextView
-        android:id="@+id/Ttitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="310dp"
-        android:layout_marginBottom="60dp"
-        android:fontFamily="@font/notosanscjkkr_black"
-        android:includeFontPadding="false"
-        android:text="번역"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/TransGuide1_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
-
-    <ImageButton
-        android:id="@+id/recbutton"
+        android:id="@+id/transBox"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/rec_shadow"
+        android:background="@drawable/rect1"
+        android:elevation="10dp"
+        android:padding="40dp"
+        android:text="번역할 내용을 입력하세요."
+        android:textColor="#AFAFAF"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/TransGuide1_1"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/rect1" />
-
-    <TextView
-        android:id="@+id/T_Hint1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginBottom="140dp"
-        android:fontFamily="@font/notosanscjkkr_regular"
-        android:text="번역할 내용을 입력하세요"
-        android:textColor="#B1B1B1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/recbutton" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/TransGuide1_1"
+        android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -75,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48016417" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -84,196 +53,185 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.09245742" />
 
-    <LinearLayout
-        android:id="@+id/Tlinear"
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_weight="4">
+        app:layout_constraintTop_toTopOf="@+id/guideline">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tiplayout1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/layout_shadow">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="4">
 
-            <TextView
-                android:id="@+id/tip1"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="@font/notosanscjkkr_regular"
-                android:text="피동 표현보다는 능동 표현이 더 좋아요."
-                android:textAlignment="gravity"
-                android:textAllCaps="true"
-                android:textColor="#505050"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/star1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <FrameLayout
+                android:id="@+id/tiplayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <ImageButton
-                android:id="@+id/star1"
-                android:layout_width="46dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="290dp"
-                android:layout_marginEnd="24dp"
-                android:background="#00FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.421"
-                app:srcCompat="@drawable/star_off" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tiplayout2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/layout_shadow">
+                <TextView
+                    android:id="@+id/tip3"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:background="#FFFFFF"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/notosanscjkkr_regular"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="60dp"
+                    android:text="기업에서 요구하는 인재상을 직종에 \n필요한 자질 등과 엮어 성격을 표현해요."
+                    android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/tip2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="@font/notosanscjkkr_regular"
-                android:text="줄임말은 지양하는 게 좋아요."
-                android:textAlignment="gravity"
-                android:textAllCaps="true"
-                android:textColor="#505050"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/star2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <CheckBox
+                    android:id="@+id/star3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:button="@drawable/star_checked"
+                    android:elevation="6dp" />
 
-            <ImageButton
-                android:id="@+id/star2"
-                android:layout_width="46dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="290dp"
-                android:layout_marginEnd="24dp"
-                android:background="#00FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.421"
-                app:srcCompat="@drawable/star_off" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tiplayout3"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/layout_shadow">
+            <FrameLayout
+                android:id="@+id/tiplayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/tip3"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="@font/notosanscjkkr_regular"
-                android:text="직무와 관련있는 장단점을 살려요."
-                android:textAlignment="gravity"
-                android:textAllCaps="true"
-                android:textColor="#505050"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/star3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/star3"
-                android:layout_width="46dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="290dp"
-                android:layout_marginEnd="24dp"
-                android:background="#00FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.421"
-                app:srcCompat="@drawable/star_off" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tip1"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:background="#FFFFFF"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/notosanscjkkr_regular"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="피동 표현보다는 능동 표현이 더 좋아요."
+                    android:textSize="15sp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tiplayout4"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/layout_shadow">
+                <CheckBox
+                    android:id="@+id/star1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:button="@drawable/star_checked"
+                    android:layout_marginRight="15dp"
+                    android:elevation="6dp"/>
 
-            <TextView
-                android:id="@+id/tip4"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/notosanscjkkr_regular"
-                android:text="기업에서 요구하는 인재상을 직종에 필요한 자질 등과 엮어 성격을 표현해요."
-                android:textAlignment="gravity"
-                android:textAllCaps="true"
-                android:textColor="#505050"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/star4"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            </FrameLayout>
 
-            <ImageButton
+            <FrameLayout
+                android:id="@+id/tiplayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/tip2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:background="#FFFFFF"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/notosanscjkkr_regular"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="줄임말은 지양하는 게 좋아요."
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/star2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:button="@drawable/star_checked"
+                    android:layout_marginRight="15dp"
+                    android:elevation="6dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/tiplayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/tip4"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:background="#FFFFFF"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/notosanscjkkr_regular"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="직무와 관련있는 장단점을 살려요."
+                    android:textSize="15sp" />
+
+                <CheckBox
                 android:id="@+id/star4"
-                android:layout_width="46dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="290dp"
-                android:layout_marginEnd="24dp"
-                android:background="#00FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.421"
-                app:srcCompat="@drawable/star_off" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:button="@drawable/star_checked"
+                android:layout_marginRight="15dp"
+                android:elevation="6dp"/>
 
-    </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.52" />
+        app:layout_constraintGuide_percent="0.5212038" />
+
+    <TextView
+        android:id="@+id/Ttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="310dp"
+        android:fontFamily="@font/notosanscjkkr_black"
+        android:includeFontPadding="false"
+        android:text="번역"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.187" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0729927" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
