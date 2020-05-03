@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Translate_before_frag extends Fragment {
+public class Translate_frag extends Fragment {
     private View view; // activity_translate의 View 객체 변수
 
     @Nullable
