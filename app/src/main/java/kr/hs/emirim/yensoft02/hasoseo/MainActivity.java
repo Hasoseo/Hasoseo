@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // 프레그먼트 교체
-     private void setFrag(int n){
+    private void setFrag(int n){
         fm = getSupportFragmentManager(); // 프래그먼트를 추가,삭제 또는 교체등의 작업
         ft = fm.beginTransaction(); // transaction 처음
         switch(n) {
