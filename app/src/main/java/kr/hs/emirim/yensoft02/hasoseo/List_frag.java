@@ -23,15 +23,11 @@ public class List_frag extends Fragment {
     private List<String> mData;
     private ArrayAdapter<String> mAdapter;
     private ListView mListView;
-    private FragmentManager fm;
-    private FragmentTransaction ft;
     private Write_frag wf;
 
     @Override
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_list_frag, container, false);
-        fm = getFragmentManager(); // 프래그먼트를 추가,삭제 또는 교체등의 작업
-        ft = fm.beginTransaction(); // transaction 처음
         wf = new Write_frag();
 
         ImageButton add_btn = (ImageButton)view.findViewById(R.id.add_btn);
