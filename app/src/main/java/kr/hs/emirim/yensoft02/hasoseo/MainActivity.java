@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView; // 네비게이션 바
     private FragmentManager fm;
     private FragmentTransaction ft;
-    private Translate_before_frag tbf; // 교정들어가기 전(교정1) fragment 객체
+    private Translate_frag tf; // 교정들어가기 전(교정1) fragment 객체
     private Write_frag wf; // 작성 fragment 객체
     private Setting_frag sf; // 환경설정 fragment 객체
 
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-        tbf = new Translate_before_frag();
+        tf = new Translate_frag();
         wf = new Write_frag();
         sf = new Setting_frag();
         setFrag(0); // 첫 프래그먼트 화면 지정
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         ft = fm.beginTransaction(); // transaction 처음
         switch(n) {
             case 0:
-                ft.replace(R.id.MainFrame, tbf); // 현재 프레임에서 activity_translate프레임으로 재배치(교정클릭전화면) transaction수정
+                ft.replace(R.id.MainFrame, tf); // 현재 프레임에서 activity_translate프레임으로 재배치(교정클릭전화면) transaction수정
                 ft.commit(); // transaction 커밋
                 break;
             case 1:

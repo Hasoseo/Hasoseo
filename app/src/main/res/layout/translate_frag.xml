@@ -86,7 +86,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="60dp"
                     android:text="기업에서 요구하는 인재상을 직종에 \n필요한 자질 등과 엮어 성격을 표현해요."
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <CheckBox
                     android:id="@+id/star3"
@@ -117,7 +117,7 @@
                     android:gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:text="피동 표현보다는 능동 표현이 더 좋아요."
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <CheckBox
                     android:id="@+id/star1"
@@ -148,7 +148,7 @@
                     android:gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:text="줄임말은 지양하는 게 좋아요."
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <CheckBox
                     android:id="@+id/star2"
@@ -179,7 +179,7 @@
                     android:gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:text="직무와 관련있는 장단점을 살려요."
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
                 <CheckBox
                 android:id="@+id/star4"
