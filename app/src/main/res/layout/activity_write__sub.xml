@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/item"
+    android:id="@+id/wItem"
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:layout_marginLeft="20dp"
@@ -19,7 +19,7 @@
     tools:context=".Write_Sub">
 
     <TextView
-        android:id="@+id/n_title"
+        android:id="@+id/wN_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -37,7 +37,7 @@
         android:textSize="13sp" />
 
     <TextView
-        android:id="@+id/n_contents"
+        android:id="@+id/wN_contents"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
