@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class TranslateActivity extends AppCompatActivity {
+public class DetailWriteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_translate);
-        //findViewById(R.id.recbutton).setOnClickListener();
+        setContentView(R.layout.activity_detail_write);
     }
 }

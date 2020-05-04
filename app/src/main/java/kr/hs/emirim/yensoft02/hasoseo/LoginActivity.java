@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements Initialize{
     private TextView findIdPassword;
     private TextView goLogup;
     private TextView email_info;
@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    protected void initialize() {
+    public void initialize() {
         findIdPassword = findViewById(R.id.find_idPwd);
         // 분석하기
         SpannableString content = new SpannableString("아이디/비밀번호 찾기");
