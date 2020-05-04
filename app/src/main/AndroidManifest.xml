@@ -13,7 +13,6 @@
 
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".WriteActivity" />
         <activity android:name=".Translate2Activity"/>
         <activity android:name=".SettingActivity" />
         <activity android:name=".ListActivity" />
