@@ -24,8 +24,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
     private TextView findIdPassword;
     private TextView goLogup;
-    private String email;
-    private String pwd;
+    private TextView email_info;
+    private TextView pwd_info;
     private Button btn;
     private FirebaseAuth user;
     private FirebaseUser currentUser;
@@ -51,7 +51,6 @@ public class LoginActivity extends AppCompatActivity {
         findIdPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
 
@@ -59,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startLogin(email.toString().trim(), pwd.toString().trim());
+                startLogin(email_info.getText().toString().trim(), pwd_info.getText().toString().trim());
             }
         });
 
@@ -80,8 +79,8 @@ public class LoginActivity extends AppCompatActivity {
         goLogup.setText(content2);
         // 분석하기
 
-        email = findViewById(R.id.email_in).toString().trim();
-        pwd = findViewById(R.id.pwd_in).toString().trim();
+        email_info = findViewById(R.id.email_in);
+        pwd_info = findViewById(R.id.pwd_in);
         btn = findViewById(R.id.logIn_btn);
         user = FirebaseAuth.getInstance();
     }
@@ -91,7 +90,6 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
                         Toast.makeText(LoginActivity.this,"user. onComplete 함수" ,Toast.LENGTH_SHORT).show();
                         if (!task.isSuccessful()) {
                             try {
