@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
-public class LogupActivity extends AppCompatActivity {
+public class LogupActivity extends AppCompatActivity implements Initialize{
     private TextView login_btn;
     private EditText email_info;
     private EditText pwd_info;
