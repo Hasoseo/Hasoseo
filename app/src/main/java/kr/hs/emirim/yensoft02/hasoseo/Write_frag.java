@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -39,6 +38,7 @@ public class Write_frag extends Fragment implements Initialize, View.OnClickList
         item.setOnClickListener(this);
         this_title.setOnClickListener(this);
         this_contents.setOnClickListener(this);
+
         return view;
     }
 
