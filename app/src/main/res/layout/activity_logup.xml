@@ -205,7 +205,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/logIn_btn"
+        android:id="@+id/logUp_btn"
         android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_marginLeft="30dp"
