@@ -180,7 +180,7 @@
                 android:ems="10"
                 android:fontFamily="@font/notosanscjkkr_regular"
                 android:hint="check password"
-                android:inputType="textPersonName" />
+                android:inputType="textPassword" />
         </LinearLayout>
 
         <LinearLayout
