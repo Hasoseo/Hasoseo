@@ -23,7 +23,7 @@
         app:layout_constraintGuide_percent="0.15" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/wBack_btn"
         android:layout_width="45dp"
         android:layout_height="43dp"
         android:layout_marginTop="48dp"
@@ -40,7 +40,7 @@
         android:layout_marginTop="60dp"
         android:text="자기소개서"
         android:textColor="#2566FF"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/wBack_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -75,7 +75,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/wTitle"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -93,7 +93,7 @@
                     android:textStyle="bold" />
 
                 <ImageButton
-                    android:id="@+id/imageButton2"
+                    android:id="@+id/wTrans_btn"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
@@ -112,7 +112,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/item"
+                    android:id="@+id/wItem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -128,7 +128,7 @@
                     tools:context=".Write_Sub">
 
                     <TextView
-                        android:id="@+id/n_title"
+                        android:id="@+id/wN_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -146,7 +146,7 @@
                         android:textSize="13sp" />
 
                     <TextView
-                        android:id="@+id/n_contents"
+                        android:id="@+id/wN_contents"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_margin="10dp"
@@ -166,7 +166,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/add_item"
+                android:id="@+id/wAdd_item"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
