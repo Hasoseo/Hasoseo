@@ -43,7 +43,6 @@ public class LogupActivity extends AppCompatActivity implements Initialize, View
     private FirebaseDatabase database;
     private DatabaseReference reference;
     private ArrayList<String> nicknameData = new ArrayList<>();
-    boolean flag=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,14 +91,13 @@ public class LogupActivity extends AppCompatActivity implements Initialize, View
 
     private void doLogup(final String nickname, final String email, final String pwd, final String check_pwd) {
         if (pwd.equals(check_pwd)) {
-            Toast.makeText(LogupActivity.this,"pwdequal",Toast.LENGTH_LONG).show();
-            checkNickname(nickname, user.getUid(), email, pwd);
+            checkNickname(nickname, email, pwd);
         } else {
             Toast.makeText(LogupActivity.this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void checkNickname(final String newNickname, final String userUid, final String email, final String pwd){
+    private void checkNickname(final String newNickname, final String email, final String pwd){
         DatabaseReference ref = reference.child("users").getRef();
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -129,8 +127,8 @@ public class LogupActivity extends AppCompatActivity implements Initialize, View
                                         }
                                         // onComplete task if문
                                     } else {
-                                        User user = new User(email, newNickname);
-                                        reference.child("users").child(userUid).setValue(user);
+                                        User user1 = new User(email, newNickname);
+                                        reference.child("users").child(user.getUid()).setValue(user1);
                                         Intent intent = new Intent(LogupActivity.this, LoginActivity.class);
                                         startActivity(intent);
                                         finish();
