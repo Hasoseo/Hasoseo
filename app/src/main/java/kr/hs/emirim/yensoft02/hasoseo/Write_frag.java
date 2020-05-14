@@ -19,6 +19,7 @@ import android.widget.TextView;
 public class Write_frag extends Fragment implements Initialize, View.OnClickListener {
     private final int DYNAMIC_VIEW_ID = 0x8000;
     private View view; // activity_write의 View 객체 변수
+    private List_frag lf;
     private LinearLayout conLinear;
     private ImageButton back_btn, trans_btn, add_btn;
     private LinearLayout item;
@@ -47,7 +48,8 @@ public class Write_frag extends Fragment implements Initialize, View.OnClickList
 
     @Override
     public void initialize() {
-        conLinear = (LinearLayout) view.findViewById(R.id.item_con);
+        lf = new List_frag();
+        conLinear = (LinearLayout)view.findViewById(R.id.item_con);
         back_btn = view.findViewById(R.id.wBack_btn);
         trans_btn = view.findViewById(R.id.wTrans_btn);
         add_btn = view.findViewById(R.id.wAdd_item);
@@ -63,7 +65,7 @@ public class Write_frag extends Fragment implements Initialize, View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.wBack_btn:
-                view.setVisibility(View.INVISIBLE);
+                ((MainActivity)getActivity()).replaceFragment(lf);
                 break;
 
             case R.id.wTrans_btn:

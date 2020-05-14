@@ -21,12 +21,13 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity implements Initialize{
+public class LoginActivity extends AppCompatActivity implements Initialize, View.OnClickListener{
     private TextView findIdPassword;
     private TextView goLogup;
-    private String email;
-    private String pwd;
+    private TextView email_info;
+    private TextView pwd_info;
     private Button btn;
+
     private FirebaseAuth user;
     private FirebaseUser currentUser;
 
@@ -37,35 +38,13 @@ public class LoginActivity extends AppCompatActivity implements Initialize{
 
         initialize();
 
-        // Click Logup Button
-        goLogup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, LogupActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        // Click Find Id&Password button
-        findIdPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        // Click Login button
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startLogin(email.toString().trim(), pwd.toString().trim());
-            }
-        });
-
+        // onClickEvent
+        goLogup.setOnClickListener(this);
+        findIdPassword.setOnClickListener(this);
+        btn.setOnClickListener(this);
     }
-
-    public void initialize() {
+    @Override
+    public void initialize() { // initialize id
         findIdPassword = findViewById(R.id.find_idPwd);
         // 분석하기
         SpannableString content = new SpannableString("아이디/비밀번호 찾기");
@@ -80,18 +59,33 @@ public class LoginActivity extends AppCompatActivity implements Initialize{
         goLogup.setText(content2);
         // 분석하기
 
-        email = findViewById(R.id.email_in).toString().trim();
-        pwd = findViewById(R.id.pwd_in).toString().trim();
+        email_info = findViewById(R.id.email_in);
+        pwd_info = findViewById(R.id.pwd_in);
         btn = findViewById(R.id.logIn_btn);
         user = FirebaseAuth.getInstance();
     }
 
-    public void startLogin(String email, String pwd){
+    @Override
+    public void onClick(View v) { // Button onClick
+        switch (v.getId()){
+            case R.id.go_logup:
+                Intent intent = new Intent(LoginActivity.this, LogupActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.find_idPwd:
+                break;
+            case R.id.logIn_btn:
+                startLogin(email_info.getText().toString().trim(), pwd_info.getText().toString().trim());
+                break;
+        }
+    }
+
+    private void startLogin(String email, String pwd){
         user.signInWithEmailAndPassword(email, pwd)
                 .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
                         Toast.makeText(LoginActivity.this,"user. onComplete 함수" ,Toast.LENGTH_SHORT).show();
                         if (!task.isSuccessful()) {
                             try {
