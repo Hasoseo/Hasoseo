@@ -74,5 +74,5 @@ public class MainActivity extends AppCompatActivity {
         ft = fm.beginTransaction(); // transaction 처음
         ft.replace(R.id.MainFrame, fragment).commit();      // Fragment로 사용할 MainActivity내의 layout공간을 선택합니다.
     }
-
 }
+

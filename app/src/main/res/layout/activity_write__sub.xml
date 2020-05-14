@@ -19,15 +19,16 @@
     tools:context=".Write_Sub">
 
     <TextView
-        android:id="@+id/wN_title"
+        android:id="@+id/sN_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:background="@null"
+        android:clickable="true"
         android:ems="10"
-        android:enabled="false"
+        android:enabled="true"
         android:hint="항목을 적어주세요."
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
@@ -37,11 +38,12 @@
         android:textSize="13sp" />
 
     <TextView
-        android:id="@+id/wN_contents"
+        android:id="@+id/sN_contents"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:background="@null"
+        android:clickable="true"
         android:ems="10"
         android:enabled="false"
         android:gravity="start|top"
